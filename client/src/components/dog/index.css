@@ -1,0 +1,65 @@
+img {
+  height: 10rem;
+}
+
+/* .container {
+  display: grid;
+
+  background-color: #ffffff;
+  height: 22rem;
+  border-radius: 1rem;
+  border: 3px solid #370665;
+}
+.container.text {
+}
+.container.img {
+  width: 100%;
+} */
+
+.container-dog {
+  /* display: flex;
+  align-items: center;
+  margin: 10px;
+  border-radius: 1rem;
+  border: 3px solid rgb(172, 95, 95); */
+  flex: 1 0 21%;
+  /* border: 1px solid rgb(116, 242, 247); */
+  background-color: #737f82;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px;
+  /* padding-bottom: 10px; */
+  border-radius: 10px;
+  border-color: rgb(0, 0, 0);
+  justify-content: space-between;
+}
+/* .container-text {
+  /* border: 1px solid rgb(116, 242, 247);
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  margin: 5px; */
+
+/* .container-img {
+} */ */
+
+.button_delete {
+  position: relative;
+  background-color: #aa0505;
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px;
+  width: 75px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 15px;
+}

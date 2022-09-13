@@ -1,0 +1,18 @@
+/* 
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+} */
+
+.container-dogs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid #294861;
+  background: #294861;
+}
+
+.pagination {
+  background: #737f82;
+  padding: 10px;
+}

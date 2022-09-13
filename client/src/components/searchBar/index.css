@@ -1,0 +1,53 @@
+/* .navbar {
+}
+
+.navbar-search-bar {
+}
+
+.navbar-temperaments {
+}
+.navbar-races {
+}
+
+.navbar-alphabetic-order {
+}
+.navbar-weight-order {
+} */
+
+nav ul li {
+  float: left;
+  list-style: none;
+  margin: 15px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+nav {
+  background: #737f82;
+  height: 60px;
+  margin-top: -20px;
+  border-bottom: 5px solid #737f82;
+  font-size: 20px;
+}
+
+.navbar-create {
+  float: right;
+  margin-right: 100px;
+}
+.button {
+  position: relative;
+
+  background-color: #0e1c26;
+  border: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
