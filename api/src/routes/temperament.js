@@ -1,7 +1,8 @@
 const axios = require("axios");
 const { Router } = require("express");
 const { Temperament } = require("../db");
-const { API_KEY } = process.env;
+const {URL_KEY} = require('../utils/constants')
+
 
 const router = Router();
 
@@ -20,9 +21,7 @@ router.get("/", async (req, res, next) => {
       }
       res.send(finalTemperamentsDB);
     } else {
-      let api = await axios.get(
-        `https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`
-      );
+      let api = await axios.get(URL_KEY);
       let filteredTemperamentsApi = api.data.map((data) => {
         return {
           name: data.temperament,
@@ -64,14 +63,23 @@ router.get("/", async (req, res, next) => {
     next(error);
   }
 });
-router.post("/", (req, res, next) => {
-  res.send("Soy un post de temperament");
+router.post("/", async (req, res, next) => {
+  let {name} = req.body
+  try {
+    const newTemperament = await Temperament.create({
+      name
+    })
+    res.send('new temperament created')
+  } catch (error) {
+    next(error)
+  }
+  
 });
-router.put("/", (req, res, next) => {
-  res.send("Soy un put de temperament");
-});
-router.delete("/", (req, res, next) => {
-  res.send("Soy un delete de temperament");
-});
+// router.put("/", (req, res, next) => {
+//   res.send("Soy un put de temperament");
+// });
+// router.delete("/", (req, res, next) => {
+//   res.send("Soy un delete de temperament");
+// });
 
 module.exports = router;

@@ -16,7 +16,7 @@ img {
   width: 100%;
 } */
 
-.container-dog {
+.container-dog{
   /* display: flex;
   align-items: center;
   margin: 10px;
@@ -24,15 +24,29 @@ img {
   border: 3px solid rgb(172, 95, 95); */
   flex: 1 0 21%;
   /* border: 1px solid rgb(116, 242, 247); */
-  background-color: #737f82;
-  color: black;
+  background-color: #ffffffc5;
+  text-decoration: none;
+  color: #294861;
   font-weight: bold;
   text-align: center;
   margin: 5px;
   /* padding-bottom: 10px; */
   border-radius: 10px;
   border-color: rgb(0, 0, 0);
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.name {
+  text-decoration: none;
+  font-style: bold;
+  font-size: 25px;
+  color: #294861;
+}
+.container-dog:hover {
+  opacity: 0.75;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  cursor: pointer;
 }
 /* .container-text {
   /* border: 1px solid rgb(116, 242, 247);

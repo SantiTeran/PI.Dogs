@@ -20,6 +20,37 @@
   cursor: pointer;
 }
 
+.button_delete {
+  position: relative;
+  background: #f1f1f1;
+  border-radius: 25px;
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.8s;
+  opacity: 0.9;
+}
+
+.button_delete:hover {
+  position: relative;
+  background-color: #ff0000;
+  border-radius: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
 .button:after {
   content: "";
   background: #f1f1f1;

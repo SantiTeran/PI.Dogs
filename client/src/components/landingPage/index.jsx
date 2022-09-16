@@ -16,7 +16,7 @@ export default function LandingPage() {
       <div></div>
       <div className="landingPageText">
         <Link to="/home">
-          <button className="button2">Welcome to my Dog App</button>
+          <button className="button2">Welcome to my Proyect</button>
         </Link>
       </div>
       {/* <Footer /> */}

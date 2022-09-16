@@ -17,14 +17,14 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <div className="Home">
+    <div >
       <SearchBar />
       {/* <Link to="/create">Create</Link> */}
       {dogsFilter ? (
         <Dogs dogsFilter={dogsFilter} />
       ) : (
-        <h3>
-          <img
+        <h3 >
+          <img className="load" 
             src="https://i.pinimg.com/originals/f8/97/e2/f897e2e871ed90d572f23b0539397432.gif"
             alt="gif"
           ></img>

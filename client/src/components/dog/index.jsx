@@ -13,14 +13,14 @@ export default function Dog(props) {
       <div className="container-dog">
         <div className="container-text">
           {/* <h5>{props.id}</h5> */}
-          <Link key={props.id} to={`/home/${props.id}`}>
-            <h3>{props.name}</h3>
+          <Link style={{ textDecoration: "none" }} key={props.id} to={`/home/${props.id}`}>
+            <h3 className="name">{props.name}</h3>
           </Link>
-          <p>{props.temperament}</p>
-          <p>{props.weight.metric ? props.weight.metric : props.weight} kg</p>
-          <p>{props.height.metric ? props.height.metric : props.height} cm</p>
+          <p>Temperament: {props.temperament}</p>
+          <p>Weight: {props.weight.metric ? props.weight.metric : props.weight} kg</p>
+          <p>Height: {props.height.metric ? props.height.metric : props.height} cm</p>
           <p>
-            {props.life_span} {props.id.length > 5 ? "years" : <></>}
+            Life Span: {props.life_span} {props.id.length > 5 ? "years" : <></>}
           </p>
         </div>
         <div className="container-img">
@@ -28,7 +28,7 @@ export default function Dog(props) {
             src={
               props.img
                 ? props.img
-                : "https://previews.123rf.com/images/red33/red331112/red33111200014/11546849-skizzieren-sie-doodle-crazy-verr%C3%BCckt-puppy-dog-vektor-illustration.jpg"
+                : "https://www.revistapetlovers.com/wp-content/uploads/2020/10/todas-razas-perros.png"
             }
             alt="imagen"
           />

@@ -6,7 +6,7 @@ const { Race, conn } = require('../../src/db.js');
 const agent = session(app);
 
 const race = {
-name: 'Pug',
+name: 'Henry Pug',
 height: 30,
 weight: 10,
 life_span: 10,

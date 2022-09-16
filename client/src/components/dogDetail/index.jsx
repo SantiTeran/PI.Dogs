@@ -18,6 +18,7 @@ export default function DogDetail(props) {
     dispatch(getDogDetail(id));
   }, [dispatch, id]);
   console.log(props);
+
   function handleClick() {
     dispatch(deleteDog(dog.id));
     alert(`Se elimino ${dog.name}`);
@@ -41,7 +42,7 @@ export default function DogDetail(props) {
       {dog ? (
         <div className="dog-detail">
           <h1>ID: {dog.id}</h1>
-          <h1>{dog.name}</h1> {console.log(dog)}
+          <h1>Name: {dog.name}</h1> {console.log(dog)}
           <img
             src={dog.image ? dog.image : dog.image_url}
             alt={`${dog.name}_image`}

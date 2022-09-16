@@ -2,7 +2,6 @@ const { Router, response } = require("express");
 const { Race, Temperament } = require("../db");
 const { Op } = require("sequelize");
 const axios = require("axios");
-const { API_KEY } = process.env;
 const {URL_KEY} = require ('../utils/constants')
 
 const router = Router();
@@ -12,7 +11,7 @@ router.get("/", async (req, res, next) => {
   //     Si no existe ninguna raza de perro mostrar un mensaje adecuado
   //    GET https://api.thedogapi.com/v1/breeds/search?q={raza_perro}
   let { name } = req.query;
-  let breedsDB, breedsApi, helper1, helper2, helper3;
+  let breedsDB, breedsApi, helper1
   if (name) {
     breedsApi = { data: undefined };
     breedsDB = await Race.findAll({
@@ -90,9 +89,9 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.post("/", (req, res, next) => {
-  res.send("Soy un post de dogs");
-});
+// router.post("/", (req, res, next) => {
+//   res.send("Soy un post de dogs");
+// });
 router.put("/", (req, res, next) => {
   res.send("Soy un put de dogs");
 });

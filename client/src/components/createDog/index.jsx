@@ -100,7 +100,7 @@ export default function CreateDog(props) {
         temperaments: [],
       });
       dispatch(createDog(dog));
-      alert("Successfully Created New Doggi :D");
+      alert("Successfully created your Puppy :D");
       navigate("/home");
     }
   }

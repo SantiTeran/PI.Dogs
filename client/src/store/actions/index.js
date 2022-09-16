@@ -15,7 +15,7 @@ export const SET_PAGES = "SET_PAGES";
 export const DELETE_DOG = "DELETE_DOG";
 
 export function getDogs() {
-  return function (dispatch) {
+  return (dispatch) => {
     axios
       .get("http://localhost:3001/dogs")
       .then((dog) => {
@@ -34,7 +34,7 @@ export function getApiDogs() {
   };
 }
 export function getTemperaments() {
-  return function (dispatch) {
+  return (dispatch) => {
     axios
       .get("http://localhost:3001/temperament")
       .then((temperaments) => {
@@ -48,7 +48,7 @@ export function getTemperaments() {
 }
 
 export function searchDog(search) {
-  return function (dispatch) {
+  return (dispatch) => {
     axios
       .get("http://localhost:3001/dogs?name=" + search)
       .then((dog) => {
@@ -62,8 +62,9 @@ export function searchDog(search) {
 }
 
 export function deleteDog(id) {
-  return function (dispatch) {
-    axios.delete(`http://localhost:3001/dogs?id=${id}`).then((dogs) => {
+  return (dispatch) => {
+    axios
+     .delete(`http://localhost:3001/dogs?id=${id}`).then((dogs) => {
       dispatch({
         type: DELETE_DOG,
         payload: dogs.data,
@@ -93,7 +94,7 @@ export function handleDbChange(db) {
 }
 
 export function createDog(dog) {
-  return async function (dispatch) {
+  return async (dispatch) => {
     var info = await axios.post("http://localhost:3001/dog", dog);
     return dispatch({
       type: CREATE_DOG,
@@ -110,7 +111,7 @@ export function createDog(dog) {
 // }
 
 export function getDogDetail(id) {
-  return async function (dispatch) {
+  return async (dispatch) => {
     var dog = await axios.get(`http://localhost:3001/dogs/${id}`);
     return dispatch({
       type: GET_DOG_DETAIL,

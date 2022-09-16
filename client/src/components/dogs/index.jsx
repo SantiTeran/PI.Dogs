@@ -148,7 +148,9 @@ export default function Dogs({ dogsFilter }) {
               );
             })
           ) : (
+            <h3 className="not_found">
             <>No se Encontro el Perrito</>
+            </h3>
           )
         ) : (
           <div>cargando</div>
@@ -156,9 +158,9 @@ export default function Dogs({ dogsFilter }) {
       </div>
 
       <div className="pagination">
-        <button onClick={() => HandleBack()}> Back </button>
+        <button className="btn" onClick={() => HandleBack()}> ◄ </button>
         <span>{`${currentPage + 1} of ${pagesTotal + 1}`}</span>
-        <button onClick={() => HandleForwad()}> Forward </button>
+        <button className="btn" onClick={() => HandleForwad()}>  ► </button>
       </div>
     </div>
   );

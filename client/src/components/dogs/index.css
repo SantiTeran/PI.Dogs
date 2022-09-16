@@ -13,6 +13,31 @@
 }
 
 .pagination {
-  background: #737f82;
+  background: #949697;
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
   padding: 10px;
+}
+
+.not_found {
+max-width: 100%;
+height: 100px;
+margin-top: 100px;
+justify-content: center;
+align-items: center;
+margin-left: 650px;
+color: white;
+}
+
+.btn {
+  border-radius: 5px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  transition: background-color 0.5s;
+}
+.btn:hover {
+  background-color: rgb(173, 165, 165);
 }
